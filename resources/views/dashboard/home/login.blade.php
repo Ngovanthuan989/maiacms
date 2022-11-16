@@ -40,9 +40,9 @@
 				<div class="d-flex flex-center bgi-size-cover bgi-no-repeat flex-row-fluid" style="background-image: url(/admin/assets/media/bg/bg-2.jpg);">
 					<div class="login-form text-center text-white p-7 position-relative overflow-hidden">
 						<!--begin::Login Header-->
-						<div class="d-flex flex-center mb-15">
+						<div class="d-flex flex-center">
 							<a href="/">
-								<img src="{{asset('/uploads/images/LOGO MAIA SECRECT (Texture golden).png')}}" class="max-h-75px" alt="" />
+								<img src="{{asset('/uploads/images/LOGO MAIA SECRECT (Texture golden).png')}}" style="width: 330px;" alt="" />
 							</a>
 						</div>
 						<!--end::Login Header-->
