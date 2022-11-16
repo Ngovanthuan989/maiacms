@@ -151,8 +151,9 @@
                       <div class="form-group mt-10">
                         <label>Sản phẩm</label>
                         <select class="form-control select2bs4" name="status"  style="width: 100%;">
-                            <option value="1">Đang bán</option>
-                            <option value="2">Dừng bán</option>
+                            @foreach ($get_product as $product)
+                                <option value="{{$product->id}}">{{$product->product_name}}</option>
+                            @endforeach
                         </select>
                       </div>
                       {{-- <div class="form-group mt-10">
@@ -164,7 +165,7 @@
                     <div class="col-sm-6">
                       <div class="form-group mt-10">
                         <label>Số lượng</label>
-                        <input type="number" name="qty" value="" placeholder="Giá bán" class="form-control">
+                        <input type="number" name="qty" value="" placeholder="Số lượng" class="form-control">
                       </div>
                       {{-- <div class="form-group mt-10">
                         <label>Đơn vị tính (chiếc, hộp, lọ, kg...)</label>
