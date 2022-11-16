@@ -85,8 +85,24 @@ class OrderController extends Controller
         //  Lấy danh sách sản phẩm
         $get_product = DB::table('product')->get();
 
+
+        $dataHeader = [];
+        $dataHeader[] = 'Content-type:application/json';
+        $dataHeader[] = 'Token: ffdccdf1-fcae-11ea-a4d7-f63a98a5d75d';
+
+        $apiUrl = 'https://online-gateway.ghn.vn/shiip/public-api/master-data/province';
+
+        $callApiGhn = HttpRequestHelper::callApi('', $apiUrl, $dataHeader);
+
+        if ($callApiGhn->code == 200) {
+            $data_province = $callApiGhn->data;
+        }else{
+            return redirect()->route('dashboard.order.show')->with('error','Không lấy được địa chỉ!');
+        }
+
         return view('dashboard.order.add',[
-            'get_product' => $get_product
+            'get_product'   => $get_product,
+            'data_province' => $data_province
         ]);
     }
     public function edit($id)

@@ -106,7 +106,7 @@
 			<!--begin::Logo-->
 			<a href="/">
                 ADMIN
-				<img style="width: 50%;" alt="Logo" src="{{asset('/uploads/images/cactrang.png')}}" />
+				<img style="width: 50%;" alt="Logo" src="{{asset('/uploads/images/LOGO MAIA SECRECT (Texture golden).png')}}" />
 			</a>
 			<!--end::Logo-->
 			<!--begin::Toolbar-->
@@ -149,7 +149,7 @@
 					<div class="brand flex-column-auto" id="kt_brand">
 						<!--begin::Logo-->
 						<a href="/" class="brand-logo">
-							<img alt="Logo" style="width: 30%;" src="{{asset('/uploads/images/AdminLTELogo.png')}}" />
+							<img alt="Logo" style="width: 65%;" src="{{asset('/uploads/images/LOGO MAIA SECRECT (Texture golden).png')}}" />
 						</a>
 						<!--end::Logo-->
 						<!--begin::Toggle-->

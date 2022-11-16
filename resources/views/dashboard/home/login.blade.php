@@ -42,7 +42,7 @@
 						<!--begin::Login Header-->
 						<div class="d-flex flex-center mb-15">
 							<a href="/">
-								<img src="{{asset('/uploads/images/AdminLTELogo.png')}}" class="max-h-75px" alt="" />
+								<img src="{{asset('/uploads/images/LOGO MAIA SECRECT (Texture golden).png')}}" class="max-h-75px" alt="" />
 							</a>
 						</div>
 						<!--end::Login Header-->
