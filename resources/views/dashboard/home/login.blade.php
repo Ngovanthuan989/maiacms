@@ -63,7 +63,7 @@
 									<div class="checkbox-inline">
 
 									</div>
-									<a href="javascript:;" id="kt_login_forgot" class="text-white font-weight-bold">Quên mật khẩu ?</a>
+									{{-- <a href="javascript:;" id="kt_login_forgot" class="text-white font-weight-bold">Quên mật khẩu ?</a> --}}
 								</div>
 								<div class="form-group text-center mt-10">
 									<button type="button"  class="btn btn-pill btn-primary opacity-90 px-15 py-3 login-admin">Đăng nhập</button>
@@ -71,7 +71,7 @@
 							</div>
 							<div class="mt-10">
 								{{-- <span class="opacity-40 mr-4">Don't have an account yet?</span> --}}
-								<a href="javascript:;" id="kt_login_signup" class="text-white opacity-30 font-weight-normal">Sign Up</a>
+								{{-- <a href="javascript:;" id="kt_login_signup" class="text-white opacity-30 font-weight-normal">Sign Up</a> --}}
 							</div>
 						</div>
 						<!--end::Login Sign in form-->
