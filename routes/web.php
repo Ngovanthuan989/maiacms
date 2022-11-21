@@ -50,6 +50,15 @@ Route::group(['middleware' => ['check.logout']], function () {
         Route::post('/addPost', 'CategoryController@addPost')->name('dashboard.category.addPost');
     });
 
+    Route::group(['prefix' => 'cash-flow-product'], function () {
+        Route::get('/add', 'CashFlowProductController@add')->name('dashboard.cashFlowProduct.add');
+        Route::get('/', 'CashFlowProductController@index')->name('dashboard.cashFlowProduct.show');
+        Route::get('/edit/{id}', 'CashFlowProductController@edit')->name('dashboard.cashFlowProduct.edit');
+        Route::post('/update', 'CashFlowProductController@update')->name('dashboard.cashFlowProduct.update');
+        Route::post('/delete', 'CashFlowProductController@delete')->name('dashboard.cashFlowProduct.delete');
+        Route::post('/addPost', 'CashFlowProductController@addPost')->name('dashboard.cashFlowProduct.addPost');
+    });
+
     Route::group(['prefix' => 'pay','middleware' => ['check.permission']], function () {
         Route::get('/add', 'PayController@add')->name('dashboard.pay.add');
         Route::get('/', 'PayController@index')->name('dashboard.pay.show');
