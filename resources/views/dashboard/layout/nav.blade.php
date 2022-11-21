@@ -141,7 +141,7 @@
                     <ul class="menu-subnav">
                         <li class="menu-item menu-item-parent" aria-haspopup="true">
                             <span class="menu-link">
-                                <span class="menu-text">Chi phí công ty</span>
+                                <span class="menu-text">Chi phí sản phẩm</span>
                             </span>
                         </li>
                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
@@ -149,15 +149,15 @@
                                 <i class="menu-bullet menu-bullet-line">
                                     <span></span>
                                 </i>
-                                <span class="menu-text">Chi phí sản phẩm</span>
+                                <span class="menu-text"> Danh sách chi phí sản phẩm</span>
                             </a>
                         </li>
                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                            <a href="/cash-flow-active-cty" class="menu-link menu-toggle">
+                            <a href="/cash-flow-product/add" class="menu-link menu-toggle">
                                 <i class="menu-bullet menu-bullet-line">
                                     <span></span>
                                 </i>
-                                <span class="menu-text">Chi phí hoạt động cty</span>
+                                <span class="menu-text">Tạo mới chi phí sản phẩm</span>
                             </a>
                         </li>
 
