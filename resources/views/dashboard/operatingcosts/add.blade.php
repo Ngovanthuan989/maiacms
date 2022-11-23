@@ -49,7 +49,7 @@
                     <div class="col-sm-6">
                         <div class="form-group mt-10">
                           <label>Số tiền chi</label>
-                          <input type="text" name="cost" value="0" placeholder="" class="form-control cost">
+                          <input type="text" name="cost" value="" placeholder="" class="form-control cost">
                         </div>
                       </div>
                 </div>
