@@ -58,6 +58,14 @@ Route::group(['middleware' => ['check.logout']], function () {
         Route::post('/delete', 'CashFlowProductController@delete')->name('dashboard.cashFlowProduct.delete');
         Route::post('/addPost', 'CashFlowProductController@addPost')->name('dashboard.cashFlowProduct.addPost');
     });
+    Route::group(['prefix' => 'operating-costs'], function () {
+        Route::get('/add', 'OperatingCostsController@add')->name('dashboard.operatingCosts.add');
+        Route::get('/', 'OperatingCostsController@index')->name('dashboard.operatingCosts.show');
+        Route::get('/edit/{id}', 'OperatingCostsController@edit')->name('dashboard.operatingCosts.edit');
+        Route::post('/update', 'OperatingCostsController@update')->name('dashboard.operatingCosts.update');
+        Route::post('/delete', 'OperatingCostsController@delete')->name('dashboard.operatingCosts.delete');
+        Route::post('/addPost', 'OperatingCostsController@addPost')->name('dashboard.operatingCosts.addPost');
+    });
 
     Route::group(['prefix' => 'pay','middleware' => ['check.permission']], function () {
         Route::get('/add', 'PayController@add')->name('dashboard.pay.add');

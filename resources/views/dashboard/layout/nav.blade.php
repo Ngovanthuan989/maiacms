@@ -199,7 +199,7 @@
                             </span>
                         </li>
                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                            <a href="/cash-flow-product" class="menu-link menu-toggle">
+                            <a href="/operating-costs" class="menu-link menu-toggle">
                                 <i class="menu-bullet menu-bullet-line">
                                     <span></span>
                                 </i>
@@ -207,7 +207,7 @@
                             </a>
                         </li>
                         <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-                            <a href="/cash-flow-product/add" class="menu-link menu-toggle">
+                            <a href="/operating-costs/add" class="menu-link menu-toggle">
                                 <i class="menu-bullet menu-bullet-line">
                                     <span></span>
                                 </i>

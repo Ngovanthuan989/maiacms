@@ -335,12 +335,12 @@
         $('.ads_costs').on('keyup', function () {
             var value = $(this).val();
             let amount = formatPrice(value);
-            $('.money_back').val(format(amount));
+            $('.ads_costs').val(format(amount));
         });
         $('.other_costs').on('keyup', function () {
             var value = $(this).val();
             let amount = formatPrice(value);
-            $('.money_back').val(format(amount));
+            $('.other_costs').val(format(amount));
         });
  </script>
 
