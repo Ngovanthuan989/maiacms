@@ -116,44 +116,23 @@
                 <table class="table table-separate table-head-custom table-checkable dataTable no-footer dtr-inline" id="kt_datatable" role="grid" aria-describedby="kt_datatable_info" style="width: 1066px;">
                     <thead>
                         <tr role="row">
-                            <th class="sorting sorting_asc" tabindex="0" aria-controls="kt_datatable" rowspan="1" colspan="1" style="width: 204px;" aria-label="Agent: activate to sort column descending" aria-sort="ascending">Tên sản phẩm</th>
-                            <th class="sorting" tabindex="0" aria-controls="kt_datatable" rowspan="1" colspan="1" style="width: 154px;" aria-label="Company Email: activate to sort column ascending">Doanh thu</th>
-                            <th class="sorting" tabindex="0" aria-controls="kt_datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Company Agent: activate to sort column ascending">Tổng nhập</th>
-                            <th class="sorting" tabindex="0" aria-controls="kt_datatable" rowspan="1" colspan="1" style="width: 155px;" aria-label="Company Name: activate to sort column ascending">Chi phí ads</th>
-                            <th class="sorting" tabindex="0" aria-controls="kt_datatable" rowspan="1" colspan="1" style="width: 155px;" aria-label="Company Name: activate to sort column ascending">Chi phí khác</th>
-                            <th class="sorting" tabindex="0" aria-controls="kt_datatable" rowspan="1" colspan="1" style="width: 155px;" aria-label="Company Name: activate to sort column ascending">Lợi nhuận gộp</th>
-                            <th class="sorting" tabindex="0" aria-controls="kt_datatable" rowspan="1" colspan="1" style="width: 155px;" aria-label="Company Name: activate to sort column ascending">Lợi nhuận ròng</th>
+                            <th class="sorting" tabindex="0" aria-controls="kt_datatable" rowspan="1" colspan="1" style="width: 154px;" aria-label="Company Email: activate to sort column ascending">Nội dung chi phí</th>
+                            <th class="sorting" tabindex="0" aria-controls="kt_datatable" rowspan="1" colspan="1" style="width: 100px;" aria-label="Company Agent: activate to sort column ascending">Số tiền chi</th>
                             <th class="sorting" tabindex="0" aria-controls="kt_datatable" rowspan="1" colspan="1" style="width: 155px;" aria-label="Company Name: activate to sort column ascending">Ngày cập nhập</th>
-
-
                             <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 105px;" aria-label="Actions">Thao tác</th>
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach ($get_cashfolow as $cashfolow)
+                    @foreach ($get_operating_costs as $operating_costs)
                         <tr class="odd">
-                            <td class="dtr-control sorting_1" tabindex="0">
-                                <div class="d-flex align-items-center">
-                                    <div class="symbol symbol-50 flex-shrink-0">
-                                        <img src="{{asset('/uploads/images/'.$cashfolow->product[0]->product_img.'')}}" alt="photo">
-                                    </div>
-                                    <div class="ml-3">
-                                        <a href="" class="text-dark-75 font-weight-bold line-height-sm d-block pb-2">{{$cashfolow->product[0]->product_name}}</a>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="">{{ number_format($cashfolow->money_back) }} </td>
-                            <td class="">{{ number_format($cashfolow->total_input_product) }} </td>
-                            <td class="">{{ number_format($cashfolow->ads_costs) }} </td>
-                            <td class="">{{ number_format($cashfolow->other_costs) }} </td>
-                            <td class="">{{ number_format($cashfolow->gross_profit) }} </td>
-                            <td class="">{{ number_format($cashfolow->net_profit) }} </td>
-                            <td>{{ date('d/m/Y H:i', strtotime($cashfolow->updated_at)) }}</td>
+                            <td class="">{{$operating_costs->name}} </td>
+                            <td class="">{{ number_format($operating_costs->cost) }} </td>
+                            <td>{{ date('d/m/Y H:i', strtotime($operating_costs->updated_at)) }}</td>
                             <td nowrap="nowrap">
-                                <a href="{{ route('dashboard.cashFlowProduct.edit', ['id' => $cashfolow->id]) }}" class="btn btn-sm btn-clean btn-icon" title="Edit details">
+                                <a href="{{ route('dashboard.operatingCosts.edit', ['id' => $operating_costs->id]) }}" class="btn btn-sm btn-clean btn-icon" title="Edit details">
                                     <i class="la la-edit"></i>
                                 </a>
-                                <a href="javascript:;" class="btn btn-sm btn-clean btn-icon delete_cashflow" data-id="{{$cashfolow->id}}" title="Delete">
+                                <a href="javascript:;" class="btn btn-sm btn-clean btn-icon delete_operating_costs" data-id="{{$operating_costs->id}}" title="Delete">
                                     <i class="la la-trash"></i>
                                 </a>
                             </td>
@@ -181,7 +160,7 @@
 
 
 <script>
-    $(document).on("click",".delete_cashflow",function() {
+    $(document).on("click",".delete_operating_costs",function() {
         let id = $(this).attr('data-id');
         $.confirm({
             content: '<p style="color:red;">Bạn có chắc chắn muốn xoá không?</p>',
@@ -191,7 +170,7 @@
                         Loading.show();
                         axios({
                             method: 'post',
-                            url: '/cash-flow-product/delete',
+                            url: '/operating-costs/delete',
                             data: {
                                 id:id,
                             }
